@@ -1,54 +1,45 @@
 # MultiplePlatformBayesianNetworks
-Associated files for Shaddox, E., Peterson, C.B., Stingo, F.C., Hanania, N., Cruickshank-Quinn, C., Kechris, K., Bowler, R. and Vannucci, M. (2018) Bayesian Inference of Networks Across Multiple Sample Groups and Data Types. Biostatistics, invited revision.
-
+Associated files for Shaddox E, Peterson CB, Stingo FC, Hanania N, Cruickshank-Quinn C, Kechris K, Bowler R, Vannucci M. (2020) Bayesian inference of networks across multiple sample groups and data types. *Biostatistics*. 21(3): 561–576.
 
 Author: Elin Shaddox
-Contact: elin@rice.edu
 
-The provided Matlab, R, and supplementary files for Bayesian inference of multiple graphical models are associated with the following publication:
 
-Shaddox, E., Peterson, C.B., Stingo, F.C., Hanania, N., Cruickshank-Quinn, C., Kechris, K., Bowler, R. and Vannucci, M. (2018) Bayesian Inference of Networks Across Multiple Sample Groups and Data Types. Biostatistics, invited revision.
+The provided Matlab, R, and supplementary files for Bayesian inference of multiple graphical models across multiple platforms are associated with the following publication:
+- Shaddox E, Peterson CB, Stingo FC, Hanania N, Cruickshank-Quinn C, Kechris K, Bowler R, Vannucci M. (2020) Bayesian inference of networks across multiple sample groups and data types. *Biostatistics*. 21(3): 561–576.
 
-These scripts rely on functions from the Matlab code for G-wishart sampling provided by Hao Wang at https://msu.edu/~haowang/ and are associated with the following publications
-Associated publications:
-H. Wang, Scaling It Up: Stochastic Search Structure Learning in Graphical Models Bayesian Analysis 10 (2015): 351-377
+These scripts rely on functions from the Matlab code originallly provided by Hao Wang associated with the following publication:
+- Wang H, Scaling it up: Stochastic search structure learning in graphical models. *Bayesian Analysis*. 10(2015): 351-377
 
-Wang, H. and Li, S. (2012). Efficient Gaussian graphical model determination
-under G-Wishart prior distributions. Electronic Journal of Statistics.
-6: 168—198.
+In addition, the code relies on aspects of the implementation for the following publiction:
+- Shaddox E, Stingo F, Peterson CB, Jacobson S, Cruickshank-Quinn C, Kechris K, Bowler R, Vannucci, M. (2018). A Bayesian approach for learning gene networks underlying disease severity in COPD. *Statistics in Biosciences*. 10(1): 59–85.
 
-Shaddox, E., Stingo, F., Peterson, C.B., Jacobson, S., Cruickshank-Quinn, C., Kechris, K., Bowler, R. and Vannucci, M. (2016). A Bayesian Approach for Learning Gene Networks Underlying Disease Severity in COPD. Statistics in Biosciences, in press.
 Please cite all publications if you use this code. Thanks!
 
-OVERVIEW OF FILES 
+### OVERVIEW OF FILES 
 
-—————————————————
 
-Example_multiple_graphs_SSVS_with_platforms.m
+### Example_multiple_graphs_SSVS_with_platforms.m
+
 Basic example of running the MCMC sampler and generating results summaries on a simple setting with:
-Platform 1 - 3 groups with identical dependence structure
-Platform 2 - 3 groups with differing dependence structure
-—————————————————
+- Platform 1 - 3 groups with identical dependence structure
+- Platform 2 - 3 groups with differing dependence structure
 
-MCMC_multiple_graphs_SSVS_with_platforms.m
+### MCMC_multiple_graphs_SSVS_with_platforms.m
 Code for running the MCMC sampler
-—————————————————
 
-calc_mrf_C.m
+### calc_mrf_C.m
 Helper function for calculating the normalizing constant for the MRF prior
-—————————————————
 
-Data Generation for Simulations
-Scripts to generate matrices similar to those from simulation Settings:
-- ScaleFreeSimTruths_p40.R provides input (true precision matrices) for generating data for p=40 simulations in ScaleFreeSimDataGeneration.m
-- count_shared_edges.m is a matlab function for counting edges between two adjacency matrix inputs
-- AR2_SimulationTruthsAndDataGeneration.m provides set up for true precision matrices and data generation in AR(2) p=80 simulation settings
+### Data generation for simulations
+Scripts to generate matrices similar to those from simulation settings:
+- ScaleFreeSimTruths_p40.R: input (true precision matrices) for generating data for p=40 simulations in ScaleFreeSimDataGeneration.m
+- count_shared_edges.m: a matlab function for counting edges between two adjacency matrix inputs
+- AR2_SimulationTruthsAndDataGeneration.m: set up for true precision matrices and data generation in AR(2) p=80 simulation settings
 
-—————————————————
 
-Metabolite Selection Example
+### Metabolite selection example
 Script, plots, and generated data to provide an example of correlated metabolite data and the iterative metabolite selection process from the publication listed above:
-- MetaboliteExampleSelection.R script for data generation and iterative process
-- corData_MetabSelectionExample.csv generated data based on correlation of a metabolite subset
-- BEFORESELECTIONgeneratedCorrDataPlots.png plot of correlated data before selection
-- AFTERSELECTIONgeneratedCorrDataPlots.png plot of less correlated data subset after selection
+- MetaboliteExampleSelection.R: script for data generation and iterative process
+- corData_MetabSelectionExample.csv: generated data based on correlation of a metabolite subset
+- BEFORESELECTIONgeneratedCorrDataPlots.png: plot of correlated data before selection
+- AFTERSELECTIONgeneratedCorrDataPlots.png: plot of less correlated data subset after selection
